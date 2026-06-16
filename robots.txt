@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+# AI-specific crawlers
+User-agent: GPTBot
+Allow: /
+Disallow:
+
+User-agent: CCBot
+Allow: /
+Disallow:
+
+User-agent: anthropic-ai
+Allow: /
+Disallow:
+
+User-agent: Claude-Web
+Allow: /
+Disallow:
+
+User-agent: Omgilibot
+Allow: /
+Disallow:
+
+User-agent: Omgili
+Allow: /
+Disallow:
+
+User-agent: FacebookBot
+Allow: /
+Disallow:
+
+Sitemap: https://3514164072.github.io/yongna-geo/sitemap.xml
