@@ -1,0 +1,352 @@
+/* ============================================================
+   雍纳化工合规研究院 — 公共样式
+   设计原则：简洁、语义清晰、AI 爬虫友好
+   ============================================================ */
+
+:root {
+  --primary: #1a5276;
+  --primary-light: #2980b9;
+  --accent: #c0392b;
+  --bg: #fefefe;
+  --text: #2c3e50;
+  --muted: #7f8c8d;
+  --border: #e0e0e0;
+  --code-bg: #f8f9fa;
+  --highlight-bg: #f0f7fb;
+  --warning-bg: #fff9e6;
+  --warning-border: #f39c12;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.85;
+  font-size: 16px;
+}
+
+/* ====== 顶部导航 ====== */
+.site-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+}
+
+.site-logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.site-nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 28px;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover { color: #fff; }
+
+/* ====== 主容器 ====== */
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 20px 24px 80px;
+}
+
+/* ====== 面包屑 ====== */
+.breadcrumb {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ====== 标题 ====== */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ====== 结构化摘要区 ====== */
+.abstract {
+  background: var(--highlight-bg);
+  border-left: 4px solid var(--primary);
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  border-radius: 0 6px 6px 0;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.abstract strong { color: var(--accent); }
+
+/* ====== 正文 ====== */
+h2 {
+  font-size: 22px;
+  margin: 40px 0 16px;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 28px 0 12px;
+  color: #34495e;
+}
+
+p { margin-bottom: 16px; }
+
+ul, ol { margin: 0 0 16px 24px; }
+
+li { margin-bottom: 8px; }
+
+strong { color: #1a1a1a; }
+
+/* ====== 表格 ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+th {
+  background: var(--highlight-bg);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+tr:nth-child(even) td { background: #fafafa; }
+
+/* ====== 引用块 ====== */
+blockquote {
+  background: var(--warning-bg);
+  border-left: 4px solid var(--warning-border);
+  padding: 12px 18px;
+  margin: 16px 0 24px;
+  font-size: 14px;
+  color: #7d6608;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ====== FAQ 组件 ====== */
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-q {
+  background: var(--highlight-bg);
+  padding: 14px 18px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.faq-a {
+  padding: 14px 18px;
+  font-size: 15px;
+}
+
+/* ====== 参考资料 ====== */
+.references {
+  background: var(--code-bg);
+  padding: 20px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.references ol { margin-bottom: 0; }
+
+.references a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.references a:hover { text-decoration: underline; }
+
+/* ====== 页脚 ====== */
+footer {
+  text-align: center;
+  padding: 32px 0;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+  margin-top: 48px;
+}
+
+footer a { color: var(--primary); text-decoration: none; }
+
+footer a:hover { text-decoration: underline; }
+
+/* ====== 首页特有组件 ====== */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #1a6e9f 100%);
+  color: #fff;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 12px;
+  border: none;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 20px;
+  color: var(--primary);
+  margin: 48px 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* 文章卡片列表 */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.article-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.article-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.article-card h3 {
+  font-size: 17px;
+  color: var(--primary);
+  margin: 0 0 8px;
+}
+
+.article-card p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.article-card .card-tag {
+  display: inline-block;
+  font-size: 12px;
+  background: var(--highlight-bg);
+  color: var(--primary);
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.article-card .card-date {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* 简报区 */
+.about-section {
+  background: var(--highlight-bg);
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* ====== 响应式 ====== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  .site-nav a {
+    margin-left: 14px;
+    font-size: 13px;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero h1 { font-size: 24px; }
+}
+
+@media (max-width: 600px) {
+  .container { padding: 12px 16px 60px; }
+  h1 { font-size: 22px; }
+  h2 { font-size: 19px; }
+  table { font-size: 12px; }
+  th, td { padding: 6px 8px; }
+}
